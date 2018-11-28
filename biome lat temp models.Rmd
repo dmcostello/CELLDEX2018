@@ -1,0 +1,174 @@
+---
+title: "CELLDEX latitude and temp statistics"
+author: "Dave Costello"
+date: "8/27/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+setwd("~/Desktop/")
+library(brms)
+library(quantreg)
+library(scales)
+```
+
+#Data import and cleaning
+```{r data import}
+#DECOMP RATES FROM BAYESIAN MODELS
+strd <- read.csv(file="str_k.csv")
+ripd <- read.csv(file="rip_k.csv")
+
+ripdd <- read.csv(file="rip_k_dd.csv")
+strdd <- read.csv(file="str_k_dd.csv")
+
+#SITE DATA FROM PARTNERS (needed for incubation time)
+fielddata <- read.csv(file="CELLDEX_SITE_DATA.csv")
+fielddata$part.str <- paste(fielddata$partnerid,fielddata$stream)
+
+#TEMPERATURE DATA (needed for degree days)
+tempdata <- read.csv(file="CELLDEX_TEMPERATURE.csv")
+tempdata$part.str <- paste(tempdata$partnerid,tempdata$stream)
+#Extract key temp variables and summarize by mean if >1 temp logger per site
+tempdata2 <- aggregate(tempdata[,c('mean_mean_daily_temp','deg_days_adj')],list(tempdata$part.str,tempdata$habitat),mean)
+colnames(tempdata2)[1:2] <- c("part.str","habitat")
+strtemp <- subset(tempdata2,habitat=="STR")
+riptemp <- subset(tempdata2,habitat=="RIP")
+```
+
+```{r merging datasets}
+#Decomp rates with latitude and biome
+ripd2 <- merge(ripd,fielddata[,c('biome_short','part.str','latitude')],by="part.str")
+strd2 <- merge(strd,fielddata[,c('biome_short','part.str','latitude')],by="part.str")
+
+ripdd2 <- merge(ripdd,fielddata[,c('biome_short','part.str','latitude')],by="part.str")
+strdd2 <- merge(strdd,fielddata[,c('biome_short','part.str','latitude')],by="part.str")
+
+#Rip and Str merge for S:R ratio
+comb.k <- merge(strd2,ripd2[,c('part.str','k')],by="part.str")
+colnames(comb.k)[c(3,6)] <- c("k.str","k.rip")
+comb.k$StoR <- comb.k$k.str/comb.k$k.rip
+
+#Decomp rates with temperature and calc. relative temp
+ripd3 <- merge(ripd,riptemp,by="part.str")
+ripd3$rel_temp <- 1/(8.62e-5*(ripd3$mean_mean_daily_temp+273.15))-1/(8.62e-5*283.15)
+strd3 <- merge(strd,strtemp,by="part.str")
+strd3$rel_temp <- 1/(8.62e-5*(strd3$mean_mean_daily_temp+273.15))-1/(8.62e-5*283.15)
+```
+
+#Decomp rates in biomes
+```{r riparian Kd biome}
+RK.biome <- brm(log10(k)~biome_short,data=ripd2) #Model with biome as predictor
+summary(RK.biome)
+bayes_R2(RK.biome) #R2 = 28%
+plot(RK.biome) #Plots of posterior distributions and chains traces
+
+RK.biome.pred <- marginal_effects(RK.biome,probs = c(0.025,0.975)) #Credible intervals
+
+plot(log10(k)~biome_short,data=ripd2) #Raw data boxplots
+points(1:11,RK.biome.pred$biome_short$estimate__,col="red") #Medians overlay
+```
+
+```{r stream Kd biome}
+SK.biome <- brm(log10(k)~biome_short,data=strd2) #Model with biome as predictor
+summary(SK.biome)
+bayes_R2(SK.biome) #R2 = 28%
+plot(SK.biome) #Plots of posterior distributions and chains traces
+
+SK.biome.pred <- marginal_effects(SK.biome,probs = c(0.025,0.975)) #Credible intervals
+
+plot(log10(k)~biome_short,data=strd2) #Raw data boxplots
+points(1:11,SK.biome.pred$biome_short$estimate__,col="red") #Medians overlay
+```
+
+#Decomp rates across latitude
+```{r riparian Kd latitude}
+#Estimates of slope at different quantiles
+RK.lat <- summary(rq(k~abs(latitude),data=ripd2,tau=seq(0.05,0.95,0.05)))
+plot(RK.lat,parm=2,ylab="slope",xlab="quantile",ols=F)
+
+#95% quantile
+RK.lat95 <- rq(k~abs(latitude),data=ripd2,tau=0.95)
+summary(RK.lat95)
+
+plot(k~abs(latitude),data=ripd2) #Plot of raw data
+abline(RK.lat95) #Overlay of 95% quantile best-fit
+```
+
+```{r stream Kd latitude}
+#Estimates of slope at different quantiles
+SK.lat <- summary(rq(k~abs(latitude),data=strd2,tau=seq(0.05,0.95,0.05)))
+plot(SK.lat,parm=2,ylab="slope",xlab="quantile",ols=F)
+
+#95% quantile
+SK.lat95 <- rq(k~abs(latitude),data=strd2,tau=0.95)
+summary(SK.lat95)
+
+plot(k~abs(latitude),data=strd2) #Plot of raw data
+abline(SK.lat95) #Overlay of 95% quantile best-fit
+```
+
+```{r riparian Kdd (degree day) latitude}
+RKdd.lat <- brm(log10(k)~abs(latitude),data=ripdd2)
+summary(RKdd.lat) #Slope does no differ than 0
+plot(RKdd.lat)
+
+plot(k~abs(latitude),data=ripdd2,log="y") #Plot of raw data
+abline(fixef(RKdd.lat)[,1],col="red") #Overlay of best-fit line
+```
+
+```{r stream Kdd (degree day) latitude}
+SKdd.lat <- brm(log10(k)~abs(latitude),data=strdd2)
+summary(SKdd.lat) #Slope differs from 0 and is negative (-2.54)
+plot(SKdd.lat)
+
+plot(k~abs(latitude),data=strdd2,log="y") #Plot of raw data
+abline(fixef(SKdd.lat)[,1],col="red") #Overlay of best-fit line
+```
+
+#River:Riparian ratios across biome
+```{r S:R k biome}
+StoR.biome <- brm(log10(StoR)~biome_short,data=comb.k) #Model with biome as predictor
+summary(StoR.biome)
+bayes_R2(StoR.biome) #R2 = 10%
+plot(StoR.biome) #Plots of posterior distributions and chains traces
+
+StoR.biome.pred <- marginal_effects(StoR.biome,probs = c(0.025,0.975)) #Credible intervals
+
+plot(log10(StoR)~biome_short,data=comb.k) #Raw data boxplots
+points(1:11,StoR.biome.pred$biome_short$estimate__,col="red") #Medians overlay
+```
+
+#Arrhenius plots
+```{r riparian k and rel temp}
+RK.arr <- brm(log(k)~rel_temp,data=ripd3)
+summary(RK.arr) #slope = -0.40
+plot(RK.arr) #Plots of posterior distributions and chain traces
+RK.arr.pred <- marginal_effects(RK.arr,probs = c(0.025,0.975)) #Credible interval
+
+plot(log(k)~rel_temp,data=ripd3,ylim=c(-8,0),xlim=c(-3.4,2),las=1,
+     xlab=expression("Inv. rel. temp. (1/k"[B]*"T-1/k"[B]*"T"[0]*")"),
+     ylab=expression("ln k"[D]*" (day"^-1*")"),cex=0.8)
+
+#Best-fit line overlay and credible intervals
+lines(RK.arr.pred$rel_temp$rel_temp,RK.arr.pred$rel_temp$estimate__,col="red",lwd=2)
+lines(RK.arr.pred$rel_temp$rel_temp,RK.arr.pred$rel_temp$lower__,lty=2,col="red")
+lines(RK.arr.pred$rel_temp$rel_temp,RK.arr.pred$rel_temp$upper__,lty=2,col="red")
+```
+
+```{r stream k and rel temp}
+SK.arr <- brm(log(k)~rel_temp,data=strd3)
+summary(SK.arr) #slope = -0.68
+plot(SK.arr) #Plots of posterior distributions and chain traces
+SK.arr.pred <- marginal_effects(SK.arr,probs = c(0.025,0.975)) #Credible interval
+
+plot(log(k)~rel_temp,data=strd3,ylim=c(-8,0),xlim=c(-3.4,2),las=1,
+     xlab=expression("Inv. rel. temp. (1/k"[B]*"T-1/k"[B]*"T"[0]*")"),
+     ylab=expression("ln k"[D]*" (day"^-1*")"),cex=0.8)
+
+#Best-fit line overlay and credible intervals
+lines(SK.arr.pred$rel_temp$rel_temp,SK.arr.pred$rel_temp$estimate__,col="red",lwd=2)
+lines(SK.arr.pred$rel_temp$rel_temp,SK.arr.pred$rel_temp$lower__,lty=2,col="red")
+lines(SK.arr.pred$rel_temp$rel_temp,SK.arr.pred$rel_temp$upper__,lty=2,col="red")
+```
+

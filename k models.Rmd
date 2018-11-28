@@ -1,0 +1,269 @@
+---
+title: "CELLDEX - k models"
+author: "Dave Costello"
+date: "8/22/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(rjags)
+```
+
+#Data import and cleaning
+```{r data import}
+#COTTON STRIP TENSILE STRENGTH
+tensile <- read.csv(file="CELLDEX_TENSILE_DATA.csv")
+summary(tensile)
+length(unique(tensile$partnerid)) #135 partners with cotton data
+
+#SITE DATA FROM PARTNERS (needed for incubation time)
+fielddata <- read.csv(file="CELLDEX_SITE_DATA.csv")
+summary(fielddata)
+length(unique(fielddata$partnerid)) #131 partners with field data
+
+#TEMPERATURE DATA (needed for degree days)
+tempdata <- read.csv(file="CELLDEX_TEMPERATURE.csv")
+#Extract key temp variables and summarize by mean if >1 temp logger per site
+tempdata_simp <- aggregate(tempdata[,c('mean_mean_daily_temp','deg_days_adj')],list(tempdata$partnerid,tempdata$stream,tempdata$habitat),mean)
+colnames(tempdata_simp)[1:3] <- c("partnerid","stream","habitat")
+names(tempdata_simp)
+str(tempdata_simp)
+length(unique(tempdata_simp$partnerid)) #98 partners with temp data
+
+#COMBINE DATASETS
+#Merge field data and tensile strength (excludes controls and any with no field data)
+tensile_field <- merge(tensile,fielddata,by=c("partnerid","stream"))
+
+#Merge with temperature data
+tensile_full <- merge(tensile_field,tempdata_simp,by=c("partnerid","stream","habitat"),all.x=T)
+summary(tensile_full)
+
+
+#GENERATE SUBSETS
+#Dataset that only includes sites with incubation time
+tensile_wT<- tensile_full[!is.na(tensile_full$deploy_time),]
+
+#Riparian only
+tenR <- subset(tensile_wT,habitat=="RIP")
+tenR$part.str <- paste(tenR$partnerid,tenR$stream)
+
+#Stream only
+tenS <- subset(tensile_wT,habitat=="STR")
+tenS$part.str <- paste(tenS$partnerid,tenS$stream)
+
+#Dataset that only includes sites with temperature data
+tensile_wDD<- tensile_full[!is.na(tensile_full$deg_days_adj),]
+
+#Riparian only
+tenRdd <- subset(tensile_wDD,habitat=="RIP")
+tenRdd$part.str <- paste(tenRdd$partnerid,tenRdd$stream)
+
+#Stream only
+tenSdd <- subset(tensile_wDD,habitat=="STR")
+tenSdd$part.str <- paste(tenSdd$partnerid,tenSdd$stream)
+
+#Control only data
+CtrlT <- subset(tensile,stream=="0")
+summary(CtrlT)
+length(unique(CtrlT$partnerid)) ##77 partners with control data
+```
+
+#Estimating kD
+```{r kD for riparian zones}
+#Create site indexing
+tenR <- transform(tenR,Stream.index=match(part.str,unique(part.str))) 
+summary(tenR)
+(n.streamsR <- length(unique(tenR$Stream.index))) #533 riparian zones with data
+
+#Data list
+dataRIP = list(
+  MaxT = tenR$maxT,
+  CtrlT = CtrlT$maxT,
+  Time = tenR$deploy_time,
+  n.streams= n.streamsR,
+  Stream = tenR$Stream.index
+)
+
+#Initial conditions
+Rinit = list(
+  list(
+  sigma.c= 0.2,
+  sigma = 0.007,
+  k = rep(0.1,n.streamsR),
+  Tc = 4),
+  list(
+  sigma.c= 0.1,
+  sigma = 0.4,
+  k = rep(0.01,n.streamsR),
+  Tc = 5),
+  list(
+  sigma.c= 1,
+  sigma = 1,
+  k = rep(0.0001,n.streamsR),
+  Tc = 2))
+
+#Run the JAGS model - track k for each site, sigma, mean Tmax of control, and sigma of controls
+RIPk=jags.model("JAGS_strip_hier.R", data=dataRIP, n.adapt = 3000, inits=Rinit, n.chains=3)
+update(RIPk,n.iter=7000)
+#Coda output
+cRIPk = coda.samples(RIPk,variable.names =  c("k","sigma","CTRL","sigma.c"), n.iter=10000)
+#JAGS output
+jRIPk = jags.samples(RIPk, variable.names =  c("k","sigma","CTRL","sigma.c"), n.iter=10000)
+
+#Example plots to evaluate mixing and convergence
+plot(cRIPk[,"CTRL"])
+plot(cRIPk[,paste("k[",7:9,"]",sep="")])
+
+#Estimates of kD
+summary(jRIPk$k,median)$stat
+```
+
+```{r kD for rivers}
+#Create site indexing
+tenS <- transform(tenS,Stream.index=match(part.str,unique(part.str))) 
+summary(tenS)
+(n.streamsS <- length(unique(tenS$Stream.index))) #514 rivers with data
+
+#Data list
+dataSTR = list(
+  MaxT = tenS$maxT,
+  CtrlT = CtrlT$maxT,
+  Time = tenS$deploy_time,
+  n.streams= n.streamsS,
+  Stream = tenS$Stream.index
+)
+
+#Initial conditions
+Sinit = list(
+  list(
+  sigma.c= 0.2,
+  sigma = 0.007,
+  k = rep(0.1,n.streamsS),
+  Tc = 4),
+  list(
+  sigma.c= 0.1,
+  sigma = 0.4,
+  k = rep(0.01,n.streamsS),
+  Tc = 5),
+  list(
+  sigma.c= 1,
+  sigma = 1,
+  k = rep(0.0001,n.streamsS),
+  Tc = 2))
+
+#Run the JAGS model - track k for each site, sigma, mean Tmax of control, and sigma of controls
+STRk=jags.model("JAGS_strip_hier.R", data=dataSTR, n.adapt = 3000, inits=Sinit, n.chains=3)
+update(STRk,n.iter=7000)
+#Coda output
+cSTRk = coda.samples(STRk,variable.names =  c("k","sigma","CTRL","sigma.c"), n.iter=10000)
+#JAGS output
+jSTRk = jags.samples(STRk, variable.names =  c("k","sigma","CTRL","sigma.c"), n.iter=10000)
+
+#Example plots to evaluate mixing and convergence
+plot(cSTRk[,"CTRL"])
+plot(cSTRk[,paste("k[",10:12,"]",sep="")])
+
+#Estimates of kD
+summary(jSTRk$k,median)$stat
+```
+
+#Estimating kDD (degree day)
+```{r kDD for riparian zones}
+#Create site indexing
+tenRdd <- transform(tenRdd,Stream.index=match(part.str,unique(part.str))) 
+summary(tenRdd)
+(n.streamsRdd <- length(unique(tenRdd$Stream.index))) #343 riparian zones with temp data
+
+#Data list
+dataRIPdd = list(
+  MaxT = tenRdd$maxT,
+  CtrlT = CtrlT$maxT,
+  dd = tenRdd$deg_days_adj,
+  n.streams= n.streamsRdd,
+  Stream = tenRdd$Stream.index
+)
+
+#Initial conditions
+Rddinit = list(
+  list(
+  sigma.c= 0.2,
+  sigma = 0.007,
+  k = rep(0.01,n.streamsRdd),
+  Tc = 4),
+  list(
+  sigma.c= 0.1,
+  sigma = 0.4,
+  k = rep(0.001,n.streamsRdd),
+  Tc = 5),
+  list(
+  sigma.c= 1,
+  sigma = 1,
+  k = rep(0.00001,n.streamsRdd),
+  Tc = 2))
+
+#Run the JAGS model - track k for each site, sigma, mean Tmax of control, and sigma of controls
+RIPkdd=jags.model("JAGS_strip_hier_dd.R", data=dataRIPdd, n.adapt = 3000, inits=Rddinit, n.chains=3)
+update(RIPkdd,n.iter=7000)
+#Coda output
+cRIPkdd = coda.samples(RIPkdd,variable.names =  c("k","sigma","CTRL","sigma.c"), n.iter=10000)
+#JAGS output
+jRIPkdd = jags.samples(RIPkdd, variable.names =  c("k","sigma","CTRL","sigma.c"), n.iter=10000)
+
+#Example plots to evaluate mixing and convergence
+plot(cRIPkdd[,"CTRL"])
+plot(cRIPkdd[,paste("k[",10:12,"]",sep="")])
+
+#Estimates of kDD
+summary(jRIPkdd$k,median)$stat
+```
+
+```{r kDD for rivers}
+#Create site indexing
+tenSdd <- transform(tenSdd,Stream.index=match(part.str,unique(part.str))) 
+summary(tenSdd)
+(n.streamsSdd <- length(unique(tenSdd$Stream.index))) #354 rivers with temp data
+
+#Data list
+dataSTRdd = list(
+  MaxT = tenSdd$maxT,
+  CtrlT = CtrlT$maxT,
+  dd = tenSdd$deg_days_adj,
+  n.streams= n.streamsSdd,
+  Stream = tenSdd$Stream.index
+)
+
+#Initial conditions
+Sddinit = list(
+  list(
+  sigma.c= 0.2,
+  sigma = 0.007,
+  k = rep(0.01,n.streamsSdd),
+  Tc = 4),
+  list(
+  sigma.c= 0.1,
+  sigma = 0.4,
+  k = rep(0.001,n.streamsSdd),
+  Tc = 5),
+  list(
+  sigma.c= 1,
+  sigma = 1,
+  k = rep(0.00001,n.streamsSdd),
+  Tc = 2))
+
+#Run the JAGS model - track k for each site, sigma, mean Tmax of control, and sigma of controls
+STRkdd=jags.model("JAGS_strip_hier_dd.R", data=dataSTRdd, n.adapt = 3000, inits=Sddinit, n.chains=3)
+update(STRkdd,n.iter=7000)
+#Coda output
+cSTRkdd = coda.samples(STRkdd,variable.names =  c("k","sigma","CTRL","sigma.c"), n.iter=10000)
+#JAGS output
+jSTRkdd = jags.samples(STRkdd, variable.names =  c("k","sigma","CTRL","sigma.c"), n.iter=10000)
+
+#Example plots to evaluate mixing and convergence
+plot(cSTRkdd[,"CTRL"])
+plot(cSTRkdd[,paste("k[",10:12,"]",sep="")])
+
+#Estimates of kDD
+summary(jSTRkdd$k,median)$stat
+```
+
