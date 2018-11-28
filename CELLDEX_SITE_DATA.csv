@@ -1,0 +1,541 @@
+partnerid,stream,latitude,longitude,deploy_time,biome,biome_short
+1,1,46.4413889,8.5269444,35,Temperate Conifer Forests,temp_conif
+1,2,46.4559722,8.5140278,35,Temperate Conifer Forests,temp_conif
+1,3,46.4519444,8.5288889,35,Temperate Conifer Forests,temp_conif
+1,4,46.4469444,8.5383333,35,Temperate Conifer Forests,temp_conif
+2,1,45.3064972,-71.9349583,35,Temperate Broadleaf & Mixed Forests,temp_broad
+2,2,45.5941389,-72.1447944,35,Temperate Broadleaf & Mixed Forests,temp_broad
+2,3,45.3725778,-71.209975,35,Temperate Broadleaf & Mixed Forests,temp_broad
+2,4,45.5448611,-73.1571667,35,Temperate Broadleaf & Mixed Forests,temp_broad
+3,1,42.4411111,-76.4491667,29,Temperate Broadleaf & Mixed Forests,temp_broad
+3,2,42.385,-76.5530556,29,Temperate Broadleaf & Mixed Forests,temp_broad
+3,3,42.3422222,-76.2438889,29,Temperate Broadleaf & Mixed Forests,temp_broad
+3,4,42.4219444,-76.33,29,Temperate Broadleaf & Mixed Forests,temp_broad
+4,1,53.2077667,-6.2933667,44,Temperate Broadleaf & Mixed Forests,temp_broad
+4,2,53.16255,-6.3002,44,Temperate Broadleaf & Mixed Forests,temp_broad
+4,3,53.1290167,-6.2944333,44,Temperate Broadleaf & Mixed Forests,temp_broad
+5,1,44.039084,-78.57832,28,Temperate Broadleaf & Mixed Forests,temp_broad
+5,2,44.01781,-78.685356,28,Temperate Broadleaf & Mixed Forests,temp_broad
+5,3,44.010698,-78.781537,28,Temperate Broadleaf & Mixed Forests,temp_broad
+5,4,43.999637,-79.067008,28,Temperate Broadleaf & Mixed Forests,temp_broad
+6,1,-27.7333333,-48.5166667,25,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+6,2,-27.7333333,-48.5166667,25,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+6,3,-27.7333333,-48.5166667,25,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+6,4,-27.7333333,-48.5166667,25,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+7,1,-12.9958,-41.3267333,31,Deserts & Xeric Shrublands,desert
+7,2,-12.9996167,-41.3176,31,Deserts & Xeric Shrublands,desert
+7,3,-12.99775,-41.3411167,31,Deserts & Xeric Shrublands,desert
+7,4,-12.9930833,-41.34055,31,Deserts & Xeric Shrublands,desert
+8,1,57.1251889,-135.3529972,57,Temperate Conifer Forests,temp_conif
+8,2,57.1302917,-135.3579306,57,Temperate Conifer Forests,temp_conif
+8,3,57.1259972,-135.3779889,57,Temperate Conifer Forests,temp_conif
+8,4,57.0627278,-135.3035306,57,Temperate Conifer Forests,temp_conif
+9,1,-34.9712056,138.6819056,84,"Mediterranean Forests, Woodlands & Scrub",mediter
+9,2,-34.9028806,138.7029861,84,"Mediterranean Forests, Woodlands & Scrub",mediter
+9,3,-34.8823472,138.7024639,84,"Mediterranean Forests, Woodlands & Scrub",mediter
+9,4,-34.8737361,138.7543611,84,"Mediterranean Forests, Woodlands & Scrub",mediter
+10,1,56.9749667,25.6227667,34,Temperate Broadleaf & Mixed Forests,temp_broad
+10,2,56.9786833,25.6265833,34,Temperate Broadleaf & Mixed Forests,temp_broad
+10,3,57.1992167,25.1550667,33,Temperate Broadleaf & Mixed Forests,temp_broad
+10,4,57.2025,25.2266667,33,Temperate Broadleaf & Mixed Forests,temp_broad
+11,1,39.104022,-96.547892,28,"Temperate Grasslands, Savannas & Shrublands",temp_grass
+11,2,39.079251,-96.593845,28,"Temperate Grasslands, Savannas & Shrublands",temp_grass
+11,3,39.081295,-96.582181,28,"Temperate Grasslands, Savannas & Shrublands",temp_grass
+11,4,39.100726,-96.574119,28,"Temperate Grasslands, Savannas & Shrublands",temp_grass
+12,1,43.76318,-80.22787,28,Temperate Broadleaf & Mixed Forests,temp_broad
+12,2,43.49301,-80.13589,28,Temperate Broadleaf & Mixed Forests,temp_broad
+12,3,43.31965,-80.31795,28,Temperate Broadleaf & Mixed Forests,temp_broad
+12,4,43.30655,-80.30595,28,Temperate Broadleaf & Mixed Forests,temp_broad
+13,1,30.41894,-97.81269,20,"Temperate Grasslands, Savannas & Shrublands",temp_grass
+13,2,30.24457,-98.12511,20,"Temperate Grasslands, Savannas & Shrublands",temp_grass
+13,3,30.1688,-98.219,20,"Temperate Grasslands, Savannas & Shrublands",temp_grass
+13,4,30.1381,-97.77395,20,"Temperate Grasslands, Savannas & Shrublands",temp_grass
+14,1,59.747187,16.348707,36,Temperate Broadleaf & Mixed Forests,temp_broad
+14,2,59.646851,15.942801,33,Boreal Forests/Taiga,taiga
+14,3,59.854925,15.998591,33,Boreal Forests/Taiga,taiga
+14,4,59.885325,15.885905,32,Boreal Forests/Taiga,taiga
+15,1,-46.25886,-72.39667,38,Temperate Broadleaf & Mixed Forests,temp_broad
+15,2,-45.35625,-71.77115,41,Temperate Broadleaf & Mixed Forests,temp_broad
+15,3,-45.29717,-71.77717,37,Temperate Broadleaf & Mixed Forests,temp_broad
+15,4,-45.64016,-72.21484,39,Temperate Broadleaf & Mixed Forests,temp_broad
+16,1,40.0801667,-8.2031361,29,"Mediterranean Forests, Woodlands & Scrub",mediter
+16,2,40.290952,-8.390587,29,"Mediterranean Forests, Woodlands & Scrub",mediter
+16,3,40.0749722,-8.24625,29,"Mediterranean Forests, Woodlands & Scrub",mediter
+16,4,40.0564444,-8.2126389,29,"Mediterranean Forests, Woodlands & Scrub",mediter
+17,1,47.3738194,-123.3230194,30,Temperate Conifer Forests,temp_conif
+17,2,47.0849194,-122.9747778,32,Temperate Conifer Forests,temp_conif
+17,3,47.0101917,-122.9927778,32,Temperate Conifer Forests,temp_conif
+17,4,47.0807222,-122.9819056,30,Temperate Conifer Forests,temp_conif
+18,1,46.4911111,9.8991667,23,Temperate Conifer Forests,temp_conif
+18,2,46.4911111,9.8991667,23,Temperate Conifer Forests,temp_conif
+18,3,46.4911111,9.8991667,23,Temperate Conifer Forests,temp_conif
+18,4,46.4911111,9.8991667,23,Temperate Conifer Forests,temp_conif
+19,1,39.2358333,-76.7583333,28,Temperate Broadleaf & Mixed Forests,temp_broad
+19,2,39.2422222,-76.7513889,28,Temperate Broadleaf & Mixed Forests,temp_broad
+19,3,39.2333333,-76.7416667,28,Temperate Broadleaf & Mixed Forests,temp_broad
+19,4,39.2358333,-76.7583333,28,Temperate Broadleaf & Mixed Forests,temp_broad
+20,1,40.494362,-79.076763,28,Temperate Broadleaf & Mixed Forests,temp_broad
+20,2,40.579405,-79.000631,28,Temperate Broadleaf & Mixed Forests,temp_broad
+20,3,40.66787,-79.014904,28,Temperate Broadleaf & Mixed Forests,temp_broad
+20,4,40.825462,-78.970213,28,Temperate Broadleaf & Mixed Forests,temp_broad
+21,1,43.4283333,2.2202222,30,Temperate Broadleaf & Mixed Forests,temp_broad
+21,2,43.4148611,2.2185556,30,"Mediterranean Forests, Woodlands & Scrub",mediter
+21,3,43.4205,2.2419444,30,Temperate Broadleaf & Mixed Forests,temp_broad
+21,4,43.4185278,2.1880278,30,Temperate Broadleaf & Mixed Forests,temp_broad
+22,1,53.989981,-9.523651,33,Temperate Broadleaf & Mixed Forests,temp_broad
+22,2,53.988612,-9.566631,33,Temperate Broadleaf & Mixed Forests,temp_broad
+22,3,54.01933,-9.540346,33,Temperate Broadleaf & Mixed Forests,temp_broad
+22,4,54.011546,-9.547908,33,Temperate Broadleaf & Mixed Forests,temp_broad
+23,1,-13.117384,130.786082,21,"Tropical & Subtropical Grasslands, Savannas & Shrublands",trop_grass
+23,2,-13.104469,130.794562,22,"Tropical & Subtropical Grasslands, Savannas & Shrublands",trop_grass
+23,3,-13.199852,130.69988,22,"Tropical & Subtropical Grasslands, Savannas & Shrublands",trop_grass
+23,4,-13.196333,130.699126,22,"Tropical & Subtropical Grasslands, Savannas & Shrublands",trop_grass
+25,1,51.9738667,5.7171667,35,Temperate Broadleaf & Mixed Forests,temp_broad
+25,2,51.9911,5.6547667,35,Temperate Broadleaf & Mixed Forests,temp_broad
+25,3,51.9826,5.6107,35,Temperate Broadleaf & Mixed Forests,temp_broad
+25,4,52.0147333,5.5999167,35,Temperate Broadleaf & Mixed Forests,temp_broad
+26,1,-16.1983111,-68.1181972,33,Montane Grasslands & Shrublands,mont_grass
+26,2,-16.2830611,-68.1133,33,Montane Grasslands & Shrublands,mont_grass
+26,3,-16.1398972,-68.2733194,33,Montane Grasslands & Shrublands,mont_grass
+26,4,-16.1480667,-68.2806056,33,Montane Grasslands & Shrublands,mont_grass
+27,1,47.3026861,8.6094083,28,Temperate Broadleaf & Mixed Forests,temp_broad
+27,2,47.3035,8.6082528,28,Temperate Broadleaf & Mixed Forests,temp_broad
+27,3,47.3028917,8.6098139,28,Temperate Broadleaf & Mixed Forests,temp_broad
+27,4,47.3122528,8.6040417,28,Temperate Broadleaf & Mixed Forests,temp_broad
+28,1,43.5513611,5.5874167,20,"Mediterranean Forests, Woodlands & Scrub",mediter
+28,2,43.5204722,5.5465,20,"Mediterranean Forests, Woodlands & Scrub",mediter
+28,3,43.5173333,5.5866667,20,"Mediterranean Forests, Woodlands & Scrub",mediter
+29,1,0.7140833,35.4240556,28,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+29,2,0.6415833,35.4944722,28,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+29,3,0.74475,35.4735833,28,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+29,4,0.82975,35.4480833,28,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+30,1,-33.9037194,-56.0062306,28,"Tropical & Subtropical Grasslands, Savannas & Shrublands",trop_grass
+30,2,-33.7960944,-55.834525,28,"Tropical & Subtropical Grasslands, Savannas & Shrublands",trop_grass
+30,3,-33.7362028,-55.6635722,28,"Tropical & Subtropical Grasslands, Savannas & Shrublands",trop_grass
+30,4,-33.6764139,-55.652325,28,"Tropical & Subtropical Grasslands, Savannas & Shrublands",trop_grass
+31,1,45.373268,25.55067,38,Temperate Conifer Forests,temp_conif
+31,2,45.452672,25.634325,38,Temperate Conifer Forests,temp_conif
+31,3,45.396863,25.567982,38,Temperate Conifer Forests,temp_conif
+31,4,45.418,25.562826,NA,Temperate Conifer Forests,temp_conif
+32,1,47.1119,17.7898389,35,Temperate Broadleaf & Mixed Forests,temp_broad
+32,2,46.9957333,17.6518472,35,Temperate Broadleaf & Mixed Forests,temp_broad
+32,3,46.9897667,17.8864194,35,Temperate Broadleaf & Mixed Forests,temp_broad
+32,4,46.9872389,17.9182056,35,Temperate Broadleaf & Mixed Forests,temp_broad
+33,1,64.252197,19.7763,31,Boreal Forests/Taiga,taiga
+33,2,64.259399,19.773899,31,Boreal Forests/Taiga,taiga
+33,3,64.260803,19.760401,31,Boreal Forests/Taiga,taiga
+33,4,64.198097,19.869101,31,Boreal Forests/Taiga,taiga
+34,1,39.7572694,2.7120278,22,"Mediterranean Forests, Woodlands & Scrub",mediter
+34,2,39.8982028,2.9923472,22,"Mediterranean Forests, Woodlands & Scrub",mediter
+34,3,39.8936472,2.9941417,22,"Mediterranean Forests, Woodlands & Scrub",mediter
+34,4,39.8935806,2.9951917,22,"Mediterranean Forests, Woodlands & Scrub",mediter
+35,1,62.3667667,25.0864333,35,Boreal Forests/Taiga,taiga
+35,2,63.31445,24.79205,34,Boreal Forests/Taiga,taiga
+35,3,63.4504333,25.2721833,34,Boreal Forests/Taiga,taiga
+35,4,63.9835167,26.7284833,34,Boreal Forests/Taiga,taiga
+36,1,-41.1846722,173.4875806,28,Temperate Broadleaf & Mixed Forests,temp_broad
+36,2,-41.2964833,173.3690611,28,Temperate Broadleaf & Mixed Forests,temp_broad
+36,3,-41.2981,173.3348444,24,Temperate Broadleaf & Mixed Forests,temp_broad
+36,4,-41.3140028,173.2912667,31,Temperate Broadleaf & Mixed Forests,temp_broad
+37,1,51.423876,-1.71718,29,Temperate Broadleaf & Mixed Forests,temp_broad
+37,2,51.414487,-0.646557,29,Temperate Broadleaf & Mixed Forests,temp_broad
+37,3,51.237386,0.968261,30,Temperate Broadleaf & Mixed Forests,temp_broad
+37,4,51.081777,0.056149,30,Temperate Broadleaf & Mixed Forests,temp_broad
+38,1,-39.9528194,-73.1922417,40,Temperate Broadleaf & Mixed Forests,temp_broad
+38,2,-39.9600611,-73.3212333,40,Temperate Broadleaf & Mixed Forests,temp_broad
+38,3,-39.95395,-73.3303417,40,Temperate Broadleaf & Mixed Forests,temp_broad
+38,4,-39.9234722,-73.4135306,40,Temperate Broadleaf & Mixed Forests,temp_broad
+39,1,-2.868133,-79.11430014,27,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+39,2,-2.869066,-79.11558462,31,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+39,3,-2.871621,-79.11960934,27,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+39,4,-2.874338,-79.12282444,27,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+40,1,40.579503,-111.047669,32,Temperate Conifer Forests,temp_conif
+40,2,41.875846,-111.564533,30,Temperate Conifer Forests,temp_conif
+40,3,40.809522,-111.765472,29,Temperate Conifer Forests,temp_conif
+40,4,40.779602,-111.806669,29,Deserts & Xeric Shrublands,desert
+41,1,44.545501,-123.496148,30,Temperate Broadleaf & Mixed Forests,temp_broad
+41,2,44.549005,-123.485049,30,Temperate Broadleaf & Mixed Forests,temp_broad
+41,3,44.546931,-123.468754,30,Temperate Broadleaf & Mixed Forests,temp_broad
+41,4,44.545176,-123.448346,30,Temperate Broadleaf & Mixed Forests,temp_broad
+42,1,37.2572222,-80.5975,36,Temperate Broadleaf & Mixed Forests,temp_broad
+42,2,37.2658333,-80.5938889,36,Temperate Broadleaf & Mixed Forests,temp_broad
+42,3,37.2375,-80.6030556,36,Temperate Broadleaf & Mixed Forests,temp_broad
+42,4,37.2555556,-80.5238889,36,Temperate Broadleaf & Mixed Forests,temp_broad
+43,1,46.25551,-89.521483,36,Temperate Broadleaf & Mixed Forests,temp_broad
+43,2,46.259211,-89.519488,36,Temperate Broadleaf & Mixed Forests,temp_broad
+43,3,46.236509,-89.492856,36,Temperate Broadleaf & Mixed Forests,temp_broad
+43,4,46.219192,-89.481997,36,Temperate Broadleaf & Mixed Forests,temp_broad
+44,1,17.4497,-93.1484,22,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+44,2,17.46635,-93.1283167,22,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+44,3,18.2525,-92.8446833,22,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+45,1,50.9768833,-115.0820667,35,Temperate Conifer Forests,temp_conif
+45,2,50.9722167,-115.0985167,35,Temperate Conifer Forests,temp_conif
+45,3,50.93235,-115.1347483,35,Temperate Conifer Forests,temp_conif
+45,4,50.8903833,-115.1361167,35,Temperate Conifer Forests,temp_conif
+46,1,31.05875,-89.2421111,29,Temperate Conifer Forests,temp_conif
+46,2,31.1020806,-89.2397889,29,Temperate Conifer Forests,temp_conif
+46,3,31.1037583,-89.2096611,29,Temperate Conifer Forests,temp_conif
+46,4,31.3505278,-89.4169722,26,Temperate Conifer Forests,temp_conif
+47,1,62.855465,25.469201,36,Boreal Forests/Taiga,taiga
+47,2,62.837,25.45957,36,Boreal Forests/Taiga,taiga
+47,3,62.2044779,25.60775,36,Boreal Forests/Taiga,taiga
+47,4,62.229638,25.569677,36,Boreal Forests/Taiga,taiga
+48,1,-42.896531,147.264722,33,Temperate Broadleaf & Mixed Forests,temp_broad
+48,2,-42.922052,147.252283,33,Temperate Broadleaf & Mixed Forests,temp_broad
+48,3,-42.907978,147.264159,34,Temperate Broadleaf & Mixed Forests,temp_broad
+48,4,-42.915404,147.329809,34,Temperate Broadleaf & Mixed Forests,temp_broad
+49,1,-27.6044444,-52.2688889,34,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+49,2,-27.5013889,-51.9491667,31,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+49,3,-27.5147222,-52.3325,34,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+49,4,-27.4966667,-51.9333333,31,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+50,1,-34.3911667,-54.4967222,31,"Tropical & Subtropical Grasslands, Savannas & Shrublands",trop_grass
+50,2,-34.674,-54.3688333,31,"Tropical & Subtropical Grasslands, Savannas & Shrublands",trop_grass
+50,3,-34.2503333,-54.2138056,31,"Tropical & Subtropical Grasslands, Savannas & Shrublands",trop_grass
+50,4,-34.0775556,-53.934,31,"Tropical & Subtropical Grasslands, Savannas & Shrublands",trop_grass
+51,1,-10.2623333,-48.13755,21,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+51,2,-10.2848167,-48.1595167,21,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+51,3,-10.27965,-48.1954,21,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+51,4,-10.2476833,-48.1150333,21,"Tropical & Subtropical Grasslands, Savannas & Shrublands",trop_grass
+52,1,-19.2105556,-46.9919444,28,"Tropical & Subtropical Grasslands, Savannas & Shrublands",trop_grass
+52,2,-19.1644444,-47.0116667,28,"Tropical & Subtropical Grasslands, Savannas & Shrublands",trop_grass
+52,3,-19.1316667,-47.0480556,28,"Tropical & Subtropical Grasslands, Savannas & Shrublands",trop_grass
+52,4,-19.1233333,-46.8252778,28,"Tropical & Subtropical Grasslands, Savannas & Shrublands",trop_grass
+53,1,-13.113412,130.799162,22,"Tropical & Subtropical Grasslands, Savannas & Shrublands",trop_grass
+53,2,-13.10193,130.781625,22,"Tropical & Subtropical Grasslands, Savannas & Shrublands",trop_grass
+53,3,-13.096206,130.782785,22,"Tropical & Subtropical Grasslands, Savannas & Shrublands",trop_grass
+53,4,-13.187592,130.721831,22,"Tropical & Subtropical Grasslands, Savannas & Shrublands",trop_grass
+54,1,-37.87565,145.371025,30,Temperate Broadleaf & Mixed Forests,temp_broad
+54,2,-37.8995222,145.3564639,30,Temperate Broadleaf & Mixed Forests,temp_broad
+54,3,-37.8651361,145.4110667,30,Temperate Broadleaf & Mixed Forests,temp_broad
+54,4,-37.8489,145.3467194,30,Temperate Broadleaf & Mixed Forests,temp_broad
+55,1,44.8329139,15.5568778,33,Temperate Broadleaf & Mixed Forests,temp_broad
+55,2,44.8714667,15.5997194,33,Temperate Broadleaf & Mixed Forests,temp_broad
+55,3,45.8564167,15.9639917,27,Temperate Broadleaf & Mixed Forests,temp_broad
+55,4,45.8580028,15.9349806,27,Temperate Broadleaf & Mixed Forests,temp_broad
+56,1,47.504222,-93.454358,33,Temperate Broadleaf & Mixed Forests,temp_broad
+56,2,47.514601,-93.472058,33,Temperate Broadleaf & Mixed Forests,temp_broad
+56,3,47.52327,-93.462401,33,Temperate Broadleaf & Mixed Forests,temp_broad
+56,4,47.519712,-93.469765,33,Temperate Broadleaf & Mixed Forests,temp_broad
+57,1,44.22385,-79.42123333,38,Temperate Broadleaf & Mixed Forests,temp_broad
+57,2,44.06103056,-79.62886944,38,Temperate Broadleaf & Mixed Forests,temp_broad
+57,3,44.02475,-79.96975,34,Temperate Broadleaf & Mixed Forests,temp_broad
+57,4,44.13008,-79.72736,35,Temperate Broadleaf & Mixed Forests,temp_broad
+57,5,44.58750556,-79.66553333,34,Temperate Broadleaf & Mixed Forests,temp_broad
+57,6,44.5119,-79.50206667,38,Temperate Broadleaf & Mixed Forests,temp_broad
+57,7,44.4351,-79.1271,38,Temperate Broadleaf & Mixed Forests,temp_broad
+57,8,44.24166667,-78.98166667,38,Temperate Broadleaf & Mixed Forests,temp_broad
+57,9,44.4593,-78.81985,36,Temperate Broadleaf & Mixed Forests,temp_broad
+57,10,44.46181,-78.62283,35,Temperate Broadleaf & Mixed Forests,temp_broad
+57,11,44.58538333,-78.59411667,36,Temperate Broadleaf & Mixed Forests,temp_broad
+57,12,44.427347,-78.135899,36,Temperate Broadleaf & Mixed Forests,temp_broad
+58,1,50.3968528,-104.4860861,34,"Temperate Grasslands, Savannas & Shrublands",temp_grass
+58,2,50.2872778,-105.1451194,34,"Temperate Grasslands, Savannas & Shrublands",temp_grass
+58,3,50.5727667,-103.4106361,34,"Temperate Grasslands, Savannas & Shrublands",temp_grass
+58,4,50.8338139,-104.3246333,34,"Temperate Grasslands, Savannas & Shrublands",temp_grass
+59,1,41.180475,-75.2899889,28,Temperate Broadleaf & Mixed Forests,temp_broad
+59,2,41.1276306,-75.231475,28,Temperate Broadleaf & Mixed Forests,temp_broad
+59,3,41.072724,-75.218941,28,Temperate Broadleaf & Mixed Forests,temp_broad
+59,4,41.1355167,-75.1061806,28,Temperate Broadleaf & Mixed Forests,temp_broad
+61,1,64.252197,19.7763,36,Boreal Forests/Taiga,taiga
+61,2,64.259399,19.773899,36,Boreal Forests/Taiga,taiga
+61,3,64.260803,19.760401,36,Boreal Forests/Taiga,taiga
+61,4,64.198097,19.869101,36,Boreal Forests/Taiga,taiga
+62,1,35.586,-92.682,31,Temperate Broadleaf & Mixed Forests,temp_broad
+62,2,35.587806,-92.69826638,31,Temperate Broadleaf & Mixed Forests,temp_broad
+62,3,35.5688,-92.674,31,Temperate Broadleaf & Mixed Forests,temp_broad
+62,4,35.5651,-92.6645,31,Temperate Broadleaf & Mixed Forests,temp_broad
+63,1,49.65759,-93.73246,26,Temperate Broadleaf & Mixed Forests,temp_broad
+63,2,49.64864,-93.72581,26,Temperate Broadleaf & Mixed Forests,temp_broad
+64,1,-37.8746,145.36,21,Temperate Broadleaf & Mixed Forests,temp_broad
+64,2,-37.8303,145.397,21,Temperate Broadleaf & Mixed Forests,temp_broad
+64,3,-37.8298,145.397,21,Temperate Broadleaf & Mixed Forests,temp_broad
+64,4,-37.8581,145.323,21,Temperate Broadleaf & Mixed Forests,temp_broad
+65,1,52.00309,5.73516,34,Temperate Broadleaf & Mixed Forests,temp_broad
+65,2,51.990251,5.785061,34,Temperate Broadleaf & Mixed Forests,temp_broad
+65,3,51.977843,5.758026,34,Temperate Broadleaf & Mixed Forests,temp_broad
+65,4,51.988664,5.728783,34,Temperate Broadleaf & Mixed Forests,temp_broad
+66,1,48.488655,-54.020952,36,Boreal Forests/Taiga,taiga
+66,2,48.612927,-53.970698,36,Boreal Forests/Taiga,taiga
+66,3,48.446114,-54.021368,36,Boreal Forests/Taiga,taiga
+66,4,48.433979,-54.032012,36,Boreal Forests/Taiga,taiga
+67,1,1.3202778,103.7695278,31,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+67,2,1.3243611,103.7625,31,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+67,3,1.3248611,103.7564444,31,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+67,4,1.3213611,103.7516667,31,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+68,1,-0.513158,-78.20542516,32,Montane Grasslands & Shrublands,mont_grass
+68,2,-0.504707,-78.21576061,33,Montane Grasslands & Shrublands,mont_grass
+68,3,-0.493211,-78.19976063,33,Montane Grasslands & Shrublands,mont_grass
+68,4,-0.513162,-78.21610706,33,Montane Grasslands & Shrublands,mont_grass
+69,1,61.3652778,25.2263889,34,Boreal Forests/Taiga,taiga
+69,2,61.3869444,25.3202778,34,Boreal Forests/Taiga,taiga
+69,3,61.3411111,25.1516667,34,Boreal Forests/Taiga,taiga
+69,4,61.0877778,25.6344444,35,Boreal Forests/Taiga,taiga
+70,1,58.268511,26.913609,34,Temperate Broadleaf & Mixed Forests,temp_broad
+70,2,58.228419,26.742294,34,Temperate Broadleaf & Mixed Forests,temp_broad
+70,3,58.1141,26.885656,34,Temperate Broadleaf & Mixed Forests,temp_broad
+70,4,58.360699,26.367717,34,Temperate Broadleaf & Mixed Forests,temp_broad
+71,1,-36.8795833,-72.9854333,34,Temperate Broadleaf & Mixed Forests,temp_broad
+71,2,-36.8806278,-72.9853028,34,Temperate Broadleaf & Mixed Forests,temp_broad
+71,3,-36.8806028,-72.9950889,33,Temperate Broadleaf & Mixed Forests,temp_broad
+71,4,-36.8782222,72.9939611,33,Temperate Broadleaf & Mixed Forests,temp_broad
+72,1,50.0615504,19.718899,28,Temperate Broadleaf & Mixed Forests,temp_broad
+72,2,49.842415,20.062902,28,Temperate Conifer Forests,temp_conif
+72,3,49.910985,20.113343,28,Temperate Conifer Forests,temp_conif
+72,4,49.906734,20.145963,28,Temperate Conifer Forests,temp_conif
+73,1,35.527458,138.655997,32,Temperate Broadleaf & Mixed Forests,temp_broad
+73,2,35.825342,138.526582,33,Temperate Broadleaf & Mixed Forests,temp_broad
+73,3,35.825661,138.520478,33,Temperate Broadleaf & Mixed Forests,temp_broad
+73,4,35.859703,138.56855,33,Temperate Broadleaf & Mixed Forests,temp_broad
+74,1,-23.1809,-44.1944667,39,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+74,2,-23.1836167,-44.19405,38,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+74,3,-23.1822167,-44.2022833,38,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+74,4,-23.18655,-44.1998833,38,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+75,1,39.2950222,-86.7300333,28,Temperate Broadleaf & Mixed Forests,temp_broad
+75,2,39.3070806,-86.7188417,28,Temperate Broadleaf & Mixed Forests,temp_broad
+75,3,39.3200528,-86.4491944,28,Temperate Broadleaf & Mixed Forests,temp_broad
+75,4,39.31915,-86.4431722,28,Temperate Broadleaf & Mixed Forests,temp_broad
+77,1,40.0647972,-8.3015139,34,"Mediterranean Forests, Woodlands & Scrub",mediter
+77,2,40.0684444,-8.2113056,34,"Mediterranean Forests, Woodlands & Scrub",mediter
+77,3,40.0788194,-8.2083583,34,"Mediterranean Forests, Woodlands & Scrub",mediter
+77,4,40.0896167,-8.2013194,34,"Mediterranean Forests, Woodlands & Scrub",mediter
+78,1,33.794982,-79.013281,30,Temperate Conifer Forests,temp_conif
+78,2,33.785761,-79.036187,30,Temperate Conifer Forests,temp_conif
+78,3,33.785393,-79.031565,30,Temperate Conifer Forests,temp_conif
+78,4,33.802572,-78.874103,30,Temperate Conifer Forests,temp_conif
+79,1,45.64032,-111.03074,42,"Temperate Grasslands, Savannas & Shrublands",temp_grass
+79,2,45.441018,-111.228147,42,Temperate Conifer Forests,temp_conif
+79,3,45.223194,-111.239819,42,Temperate Conifer Forests,temp_conif
+79,4,45.269176,-111.320714,42,Temperate Conifer Forests,temp_conif
+80,1,33.934071,132.897478,37,Temperate Broadleaf & Mixed Forests,temp_broad
+80,2,33.932101,132.910187,37,Temperate Broadleaf & Mixed Forests,temp_broad
+80,3,33.921034,132.909194,37,Temperate Broadleaf & Mixed Forests,temp_broad
+80,4,33.916005,132.908928,37,Temperate Broadleaf & Mixed Forests,temp_broad
+81,1,30.1181417,118.0239425,35,Temperate Broadleaf & Mixed Forests,temp_broad
+81,2,30.1175208,117.9866878,35,Temperate Broadleaf & Mixed Forests,temp_broad
+81,3,30.1154836,118.0572664,35,Temperate Broadleaf & Mixed Forests,temp_broad
+81,4,30.1155558,118.0876481,35,Temperate Broadleaf & Mixed Forests,temp_broad
+82,1,-0.677893,-77.74234997,13,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+82,2,-0.681425,-77.74147221,13,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+82,3,-0.683188,-77.73934565,13,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+82,4,-0.68382,-77.73983077,13,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+83,1,69.659851,18.555845,35,Tundra,tund
+83,2,69.670212,18.623302,35,Tundra,tund
+83,3,69.767959,18.816131,35,Tundra,tund
+83,4,69.741461,18.878004,35,Tundra,tund
+84,1,32.3572222,-81.8566667,28,Temperate Conifer Forests,temp_conif
+84,2,32.8308333,-81.5905556,44,Temperate Conifer Forests,temp_conif
+84,3,32.4483333,-81.9558333,39,Temperate Conifer Forests,temp_conif
+84,4,32.4483333,-82.0616667,40,Temperate Conifer Forests,temp_conif
+85,1,-4.0550139,-79.8081889,20,Tropical & Subtropical Dry Broadleaf Forests,trop_dry
+85,2,-4.0849944,-79.8221944,20,Tropical & Subtropical Dry Broadleaf Forests,trop_dry
+85,3,-4.1478222,-79.8509889,20,Tropical & Subtropical Dry Broadleaf Forests,trop_dry
+85,4,-4.2429917,-79.8851139,20,Tropical & Subtropical Dry Broadleaf Forests,trop_dry
+85,5,0.0329139,-76.9713944,14,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+85,6,0.018075,-76.9699278,14,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+85,7,-0.1043667,-77.0265472,14,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+85,8,-0.1732917,-76.9973806,14,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+86,1,38.900133,-76.566115,29,Temperate Broadleaf & Mixed Forests,temp_broad
+86,2,38.896192,-76.561593,29,Temperate Broadleaf & Mixed Forests,temp_broad
+86,3,38.890213,-76.565283,29,Temperate Broadleaf & Mixed Forests,temp_broad
+86,4,38.888142,-76.566013,29,Temperate Broadleaf & Mixed Forests,temp_broad
+87,1,24.76606,121.58664,27,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+87,2,24.76852,121.60186,27,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+87,3,24.757452,121.57346,27,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+87,4,24.758251,121.60513,27,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+88,1,42.85313,-112.45033,28,Deserts & Xeric Shrublands,desert
+88,2,42.79242,-112.43019,28,Deserts & Xeric Shrublands,desert
+88,3,42.79827,-112.38396,28,Deserts & Xeric Shrublands,desert
+88,4,42.70785,-112.42268,28,Deserts & Xeric Shrublands,desert
+89,1,37.3688556,140.1720417,36,Temperate Broadleaf & Mixed Forests,temp_broad
+89,2,37.3683583,140.1721389,36,Temperate Broadleaf & Mixed Forests,temp_broad
+89,3,37.3998722,140.17075,36,Temperate Broadleaf & Mixed Forests,temp_broad
+89,4,37.3983667,140.16295,35,Temperate Broadleaf & Mixed Forests,temp_broad
+90,1,53.071374,13.026283,35,Temperate Broadleaf & Mixed Forests,temp_broad
+90,2,53.055068,12.915662,35,Temperate Broadleaf & Mixed Forests,temp_broad
+90,3,53.105155,13.055109,35,Temperate Broadleaf & Mixed Forests,temp_broad
+90,4,53.188708,13.090259,35,Temperate Broadleaf & Mixed Forests,temp_broad
+91,1,42.7903056,-1.9087778,28,Temperate Broadleaf & Mixed Forests,temp_broad
+91,2,42.7344444,-1.99925,28,Temperate Broadleaf & Mixed Forests,temp_broad
+91,3,42.7420833,-2.0284444,28,Temperate Broadleaf & Mixed Forests,temp_broad
+91,4,42.69225,-2.2478333,28,Temperate Broadleaf & Mixed Forests,temp_broad
+92,1,12.6201,75.1357,21,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+92,2,12.6783333,75.1721667,21,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+92,3,12.8006167,74.9273167,21,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+92,4,12.9259333,74.8793333,21,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+93,1,54.688925,-2.3833472,34,Temperate Broadleaf & Mixed Forests,temp_broad
+93,2,54.6869917,-2.3787056,34,Temperate Broadleaf & Mixed Forests,temp_broad
+93,3,54.6945611,-2.3822639,34,Temperate Broadleaf & Mixed Forests,temp_broad
+93,4,54.7008389,-2.383175,34,Temperate Broadleaf & Mixed Forests,temp_broad
+94,1,42.4377333,-8.377475,34,Temperate Broadleaf & Mixed Forests,temp_broad
+94,2,42.3885861,-8.3773,34,Temperate Broadleaf & Mixed Forests,temp_broad
+94,3,42.3507222,-8.3775472,34,Temperate Broadleaf & Mixed Forests,temp_broad
+94,4,42.3136833,-8.4864972,34,Temperate Broadleaf & Mixed Forests,temp_broad
+96,1,12.5839167,75.4629833,21,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+96,2,12.65185,75.6211833,21,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+96,3,12.6393333,75.5782833,21,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+96,4,12.6437333,75.5754333,21,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+97,1,-0.4231333,-79.0032167,21,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+97,2,-0.4219167,-79.0036833,21,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+97,3,-0.4230333,-79.0047667,21,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+97,4,-0.4230333,-79.00495,21,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+98,1,-41.13655,-71.3523,40,Temperate Broadleaf & Mixed Forests,temp_broad
+98,2,-41.1414333,-71.4075333,40,Temperate Broadleaf & Mixed Forests,temp_broad
+98,3,-41.23665,-71.43175,40,Temperate Broadleaf & Mixed Forests,temp_broad
+98,4,-41.2449667,-71.4392167,40,Temperate Broadleaf & Mixed Forests,temp_broad
+99,1,-22.4916667,-42.8633333,25,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+99,2,-22.4451667,-42.7066667,25,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+99,3,-22.43,-42.7133333,25,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+99,4,-22.455,-42.6798333,25,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+100,1,17.7863778,97.9964361,23,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+100,2,17.7846028,97.9966417,23,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+100,3,17.7543,98.0148778,23,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+100,4,17.7048083,98.0343694,23,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+101,1,43.42,-73.72,28,Temperate Broadleaf & Mixed Forests,temp_broad
+101,2,43.59,-73.64,28,Temperate Broadleaf & Mixed Forests,temp_broad
+101,3,43.76,-73.46,27,Temperate Broadleaf & Mixed Forests,temp_broad
+101,4,43.64,-73.51,27,Temperate Broadleaf & Mixed Forests,temp_broad
+102,1,47.280448,-88.517331,35,Temperate Broadleaf & Mixed Forests,temp_broad
+102,2,47.124086,-88.644123,35,Temperate Broadleaf & Mixed Forests,temp_broad
+102,3,47.201715,-88.613602,34,Temperate Broadleaf & Mixed Forests,temp_broad
+102,4,47.148077,-88.59678,34,Temperate Broadleaf & Mixed Forests,temp_broad
+103,1,39.3868611,-0.9627889,37,"Mediterranean Forests, Woodlands & Scrub",mediter
+103,2,39.3394472,-1.3414389,37,"Mediterranean Forests, Woodlands & Scrub",mediter
+103,3,39.9181167,-0.3562389,33,"Mediterranean Forests, Woodlands & Scrub",mediter
+103,4,39.9332333,-0.7384444,NA,"Mediterranean Forests, Woodlands & Scrub",mediter
+103,5,-62.9798056,-60.6687778,12,Tundra,tund
+103,6,-62.9770556,-60.6775278,12,Tundra,tund
+103,7,-62.9798056,-60.6687778,NA,Tundra,tund
+103,8,-62.9770556,-60.6775278,NA,Tundra,tund
+104,1,42.2186944,-1.5128333,31,"Mediterranean Forests, Woodlands & Scrub",mediter
+104,2,42.2221944,-1.5103056,31,"Mediterranean Forests, Woodlands & Scrub",mediter
+104,3,42.2218611,-1.5096389,31,"Mediterranean Forests, Woodlands & Scrub",mediter
+104,4,42.2153056,-1.5081111,31,"Mediterranean Forests, Woodlands & Scrub",mediter
+105,1,46.26294,-84.49194,36,Temperate Broadleaf & Mixed Forests,temp_broad
+105,2,46.27801,-84.53964,36,Temperate Broadleaf & Mixed Forests,temp_broad
+105,3,46.28016,-84.52225,36,Temperate Broadleaf & Mixed Forests,temp_broad
+105,4,46.26642,-85.00807,36,Temperate Broadleaf & Mixed Forests,temp_broad
+106,1,18.331825,-65.8211222,36,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+106,2,18.3211833,-65.8169694,36,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+106,3,18.3227333,-65.8146306,36,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+106,4,18.3239333,-65.81535,36,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+107,1,3.1672778,101.7765833,15,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+107,2,3.1681889,101.7803083,15,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+107,3,3.1663056,101.7794,15,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+107,4,3.1656083,101.7783889,15,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+108,1,47.356011,-120.835682,35,Temperate Conifer Forests,temp_conif
+108,2,47.368016,-120.784082,35,Temperate Conifer Forests,temp_conif
+108,3,47.368359,-120.78471,35,Temperate Conifer Forests,temp_conif
+108,4,47.365879,-120.8027,35,Temperate Conifer Forests,temp_conif
+109,1,33.7873333,-111.5078056,32,Temperate Conifer Forests,temp_conif
+109,2,33.9797778,-111.3043611,32,Temperate Conifer Forests,temp_conif
+109,3,33.7060833,-110.8193611,32,Temperate Conifer Forests,temp_conif
+109,4,33.6853889,-110.8436111,32,Temperate Conifer Forests,temp_conif
+110,1,41.6051833,-81.2673333,28,Temperate Broadleaf & Mixed Forests,temp_broad
+110,2,41.17405,-81.2020667,28,Temperate Broadleaf & Mixed Forests,temp_broad
+110,3,41.1280667,-81.128,26,Temperate Broadleaf & Mixed Forests,temp_broad
+110,4,41.1453167,-81.3004333,26,Temperate Broadleaf & Mixed Forests,temp_broad
+111,1,51.70275,10.445961,43,Temperate Broadleaf & Mixed Forests,temp_broad
+111,2,51.697547,10.383178,43,Temperate Broadleaf & Mixed Forests,temp_broad
+111,3,51.680758,10.320715,43,Temperate Broadleaf & Mixed Forests,temp_broad
+111,4,51.650969,10.456585,43,Temperate Broadleaf & Mixed Forests,temp_broad
+112,1,44.575807,-69.886754,40,Temperate Broadleaf & Mixed Forests,temp_broad
+112,2,44.582896,-69.91859,40,Temperate Broadleaf & Mixed Forests,temp_broad
+112,3,44.547462,-69.919439,40,Temperate Broadleaf & Mixed Forests,temp_broad
+112,4,44.512941,-69.924809,40,Temperate Broadleaf & Mixed Forests,temp_broad
+113,1,48.4769722,7.1743333,35,Temperate Broadleaf & Mixed Forests,temp_broad
+113,2,48.5018333,7.1743333,35,Temperate Broadleaf & Mixed Forests,temp_broad
+113,3,48.5129722,7.1206667,35,Temperate Broadleaf & Mixed Forests,temp_broad
+113,4,48.49025,7.0538611,35,Temperate Broadleaf & Mixed Forests,temp_broad
+114,1,0.4981367,35.0031433,30,"Tropical & Subtropical Grasslands, Savannas & Shrublands",trop_grass
+114,2,0.63101,35.0674517,30,"Tropical & Subtropical Grasslands, Savannas & Shrublands",trop_grass
+114,3,0.7913967,34.9470383,30,"Tropical & Subtropical Grasslands, Savannas & Shrublands",trop_grass
+114,4,0.7867317,34.7679383,30,"Tropical & Subtropical Grasslands, Savannas & Shrublands",trop_grass
+115,1,45.379975,-79.142175,36,Temperate Broadleaf & Mixed Forests,temp_broad
+115,2,45.1454417,-79.0890694,40,Temperate Broadleaf & Mixed Forests,temp_broad
+115,3,45.2226889,-78.9151778,36,Temperate Broadleaf & Mixed Forests,temp_broad
+115,4,45.1786611,-78.8279861,40,Temperate Broadleaf & Mixed Forests,temp_broad
+116,1,-65.24812,-64.24269,41,Tundra,tund
+116,2,-65.24844,-64.24572,57,Tundra,tund
+116,3,-65.24639,-64.24671,57,Tundra,tund
+116,4,-65.24495,-64.256333,50,Tundra,tund
+116,5,-65.24492,-64.25494,57,Tundra,tund
+116,11,-63.8025,-57.8767,22,Tundra,tund
+116,12,-63.8123,-57.9203,22,Tundra,tund
+116,13,-63.8067,-57.885,23,Tundra,tund
+116,14,-63.8163,-57.8869,23,Tundra,tund
+117,1,-15.68834,-48.024152,41,"Tropical & Subtropical Grasslands, Savannas & Shrublands",trop_grass
+117,2,-15.688837,-48.023985,41,"Tropical & Subtropical Grasslands, Savannas & Shrublands",trop_grass
+117,3,-15.733293,-48.014997,41,"Tropical & Subtropical Grasslands, Savannas & Shrublands",trop_grass
+117,4,-15.725521,-47.940142,41,"Tropical & Subtropical Grasslands, Savannas & Shrublands",trop_grass
+118,1,45.716563,-64.159504,29,Temperate Broadleaf & Mixed Forests,temp_broad
+118,2,45.990668,-64.248315,29,Temperate Broadleaf & Mixed Forests,temp_broad
+118,3,45.725886,-64.525241,29,Temperate Broadleaf & Mixed Forests,temp_broad
+118,4,45.874873,-64.468382,28,Temperate Broadleaf & Mixed Forests,temp_broad
+119,1,58.6201,-134.936,37,Temperate Conifer Forests,temp_conif
+119,2,58.4864,-134.7774,37,Temperate Conifer Forests,temp_conif
+119,3,58.4705,-134.7836,37,Temperate Conifer Forests,temp_conif
+119,4,58.3317,-134.4705,37,Temperate Conifer Forests,temp_conif
+120,1,49.2838056,-122.5623889,35,Temperate Conifer Forests,temp_conif
+120,2,49.2948611,-122.5675556,35,Temperate Conifer Forests,temp_conif
+120,3,49.2675028,-122.5596667,35,Temperate Conifer Forests,temp_conif
+120,4,49.2775278,-122.5459167,35,Temperate Conifer Forests,temp_conif
+121,1,46.2164444,9.02175,34,Temperate Conifer Forests,temp_conif
+121,2,46.2647778,8.9917222,34,Temperate Conifer Forests,temp_conif
+121,3,46.1821667,8.9430556,34,Temperate Conifer Forests,temp_conif
+121,4,46.2350556,8.9945833,34,Temperate Conifer Forests,temp_conif
+122,1,42.933024,141.22478,37,Temperate Conifer Forests,temp_conif
+122,2,42.890136,141.342945,37,Temperate Broadleaf & Mixed Forests,temp_broad
+122,3,42.977025,141.286715,37,Temperate Broadleaf & Mixed Forests,temp_broad
+122,4,42.824668,141.291351,39,Temperate Conifer Forests,temp_conif
+123,1,55.9362361,13.8994333,41,Temperate Broadleaf & Mixed Forests,temp_broad
+123,2,55.8991806,13.9904778,41,Temperate Broadleaf & Mixed Forests,temp_broad
+123,3,55.9298472,13.5720833,41,Temperate Broadleaf & Mixed Forests,temp_broad
+123,4,55.8928694,13.6232528,41,Temperate Broadleaf & Mixed Forests,temp_broad
+124,1,43.2124167,-3.2709333,32,Temperate Broadleaf & Mixed Forests,temp_broad
+124,2,43.2091,-3.26715,32,Temperate Broadleaf & Mixed Forests,temp_broad
+124,3,43.2084667,-3.26715,32,Temperate Broadleaf & Mixed Forests,temp_broad
+124,4,43.3089167,-3.2606,32,Temperate Broadleaf & Mixed Forests,temp_broad
+125,1,37.6815333,-8.1181333,27,"Mediterranean Forests, Woodlands & Scrub",mediter
+125,2,37.5162861,-8.0103889,27,"Mediterranean Forests, Woodlands & Scrub",mediter
+125,3,37.617225,-7.6838,27,"Mediterranean Forests, Woodlands & Scrub",mediter
+125,4,37.5175194,-7.5791667,27,"Mediterranean Forests, Woodlands & Scrub",mediter
+126,1,49.373034,1.496544,31,Temperate Broadleaf & Mixed Forests,temp_broad
+126,2,49.413176,1.617605,31,Temperate Broadleaf & Mixed Forests,temp_broad
+126,3,49.232267,1.867017,31,Temperate Broadleaf & Mixed Forests,temp_broad
+126,4,49.111616,1.849061,31,Temperate Broadleaf & Mixed Forests,temp_broad
+127,1,61.5324389,23.5449806,39,Boreal Forests/Taiga,taiga
+127,2,61.5049444,23.450375,38,Boreal Forests/Taiga,taiga
+127,3,61.5769,24.1259917,36,Boreal Forests/Taiga,taiga
+127,4,61.50585,23.9314528,37,Boreal Forests/Taiga,taiga
+128,1,15.94825,-90.67535,25,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+128,2,15.94037,-90.67632,25,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+128,3,15.90793,-90.6682,25,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+128,4,15.92172,-90.65257,25,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+129,1,43.42873,-89.81822,34,Temperate Broadleaf & Mixed Forests,temp_broad
+129,2,43.38441,-89.79604,34,Temperate Broadleaf & Mixed Forests,temp_broad
+129,3,43.1018,-90.1572,34,Temperate Broadleaf & Mixed Forests,temp_broad
+129,4,43.11382,-90.05852,34,Temperate Broadleaf & Mixed Forests,temp_broad
+130,1,21.44761,-157.85721,22,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+130,2,21.4951,-157.85899,22,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+130,3,21.56833,-157.89384,22,Tropical & Subtropical Moist Broadleaf Forests,trop_wet
+130,4,21.63352,-158.05266,22,Tropical & Subtropical Dry Broadleaf Forests,trop_dry
+131,1,-40.7781833,-71.1262167,40,Temperate Broadleaf & Mixed Forests,temp_broad
+131,2,-40.7532167,-71.1205167,40,Temperate Broadleaf & Mixed Forests,temp_broad
+131,3,-40.8217,-71.1061,40,"Temperate Grasslands, Savannas & Shrublands",temp_grass
+131,4,-40.7163167,-71.0999833,40,"Temperate Grasslands, Savannas & Shrublands",temp_grass
+132,1,66.3262333,29.552,31,Boreal Forests/Taiga,taiga
+132,2,66.3387083,29.52005,31,Boreal Forests/Taiga,taiga
+132,3,66.3794417,29.4235083,31,Boreal Forests/Taiga,taiga
+132,4,66.3398,29.3286333,31,Boreal Forests/Taiga,taiga
+133,1,45.0157683,-87.147135,34,Temperate Broadleaf & Mixed Forests,temp_broad
+133,2,44.9855517,-87.191485,34,Temperate Broadleaf & Mixed Forests,temp_broad
+133,3,45.0972017,-87.0821683,34,Temperate Broadleaf & Mixed Forests,temp_broad
+133,4,45.1240517,-87.2387517,34,Temperate Broadleaf & Mixed Forests,temp_broad
+134,1,32.3671667,131.1771639,37,Temperate Broadleaf & Mixed Forests,temp_broad
+134,2,32.3677861,131.1724639,37,Temperate Broadleaf & Mixed Forests,temp_broad
+134,3,32.3754806,131.1783417,37,Temperate Broadleaf & Mixed Forests,temp_broad
+134,4,32.3765083,131.1721389,37,Temperate Broadleaf & Mixed Forests,temp_broad
+135,1,65.497,27.546,28,Boreal Forests/Taiga,taiga
+135,2,65.66,28.404,28,Boreal Forests/Taiga,taiga
+135,3,65.634,28.261,28,Boreal Forests/Taiga,taiga
+135,4,65.532,28.073,28,Boreal Forests/Taiga,taiga
