@@ -277,7 +277,7 @@ partnerid,stream,latitude,longitude,deploy_time,biome,biome_short
 71,1,-36.8795833,-72.9854333,34,Temperate Broadleaf & Mixed Forests,temp_broad
 71,2,-36.8806278,-72.9853028,34,Temperate Broadleaf & Mixed Forests,temp_broad
 71,3,-36.8806028,-72.9950889,33,Temperate Broadleaf & Mixed Forests,temp_broad
-71,4,-36.8782222,72.9939611,33,Temperate Broadleaf & Mixed Forests,temp_broad
+71,4,-36.8782222,-72.9939611,33,Temperate Broadleaf & Mixed Forests,temp_broad
 72,1,50.0615504,19.718899,28,Temperate Broadleaf & Mixed Forests,temp_broad
 72,2,49.842415,20.062902,28,Temperate Conifer Forests,temp_conif
 72,3,49.910985,20.113343,28,Temperate Conifer Forests,temp_conif
